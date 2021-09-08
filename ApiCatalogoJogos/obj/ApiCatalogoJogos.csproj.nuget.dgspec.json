@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eduhc\\Documents\\ApiCatalogoJogos\\ApiCatalogoJogos\\ApiCatalogoJogos.csproj": {}
+    "C:\\Users\\Eduardo\\Documents\\ApiCatalogoJogos\\ApiCatalogoJogos\\ApiCatalogoJogos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eduhc\\Documents\\ApiCatalogoJogos\\ApiCatalogoJogos\\ApiCatalogoJogos.csproj": {
+    "C:\\Users\\Eduardo\\Documents\\ApiCatalogoJogos\\ApiCatalogoJogos\\ApiCatalogoJogos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eduhc\\Documents\\ApiCatalogoJogos\\ApiCatalogoJogos\\ApiCatalogoJogos.csproj",
+        "projectUniqueName": "C:\\Users\\Eduardo\\Documents\\ApiCatalogoJogos\\ApiCatalogoJogos\\ApiCatalogoJogos.csproj",
         "projectName": "ApiCatalogoJogos",
-        "projectPath": "C:\\Users\\eduhc\\Documents\\ApiCatalogoJogos\\ApiCatalogoJogos\\ApiCatalogoJogos.csproj",
-        "packagesPath": "C:\\Users\\eduhc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eduhc\\Documents\\ApiCatalogoJogos\\ApiCatalogoJogos\\obj\\",
+        "projectPath": "C:\\Users\\Eduardo\\Documents\\ApiCatalogoJogos\\ApiCatalogoJogos\\ApiCatalogoJogos.csproj",
+        "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eduardo\\Documents\\ApiCatalogoJogos\\ApiCatalogoJogos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\eduhc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
