@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using ApiCatalogoJogos.Entities;
 
 namespace ApiCatalogoJogos.Repositorie
@@ -5,15 +8,15 @@ namespace ApiCatalogoJogos.Repositorie
     public interface IJogoRepositorio
     {
         //lista de jogo 
-         Task<List<Jogo>> Obter(int pagina, int quantidade);
+         Task<List<Jogos>> Obter(int pagina, int quantidade);
         //Retornar um jogo por id
-         Task<Jogo> ObterPorId(Guid id); 
+         Task<Jogos> ObterPorId(Guid id); 
         //Obter por nome do jogo e produtora
-         Task<List<Jogo>> Obter( string nome, string produtora);
+         Task<List<Jogos>> Obter( string nome, string produtora);
          //Inserir um novo jogo
-         Task Inserir (Jogo obj);
+         Task Inserir (Jogos obj);
          //Atualizar jogo
-         Task Atualizar (Jogo obj);
+         Task Atualizar (Jogos obj);
          //Deletar jogo
          Task Remover (Guid id);
     }

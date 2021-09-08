@@ -19,31 +19,35 @@ namespace ApiCatalogoJogos.Service
             _IJogoRepositorio = IjogoRepositorio;
         }
 
-        public Task<List<JogoViewModel>> Obter(int pagina, int quantidade){
-
-            
+        public Task Atualizar(Guid id, JogoInputModel jogo)
+        {
+            throw new NotImplementedException();
         }
 
-        public Task<JogoViewModel> ObterPorId(Guid id){
-
+        public Task Atualizar(Guid id, double preco)
+        {
+            throw new NotImplementedException();
         }
 
-        public Task<JogoViewModel> Inserir(JogoInputModel obj){
-
+        public Task Deletar(Guid id)
+        {
+            throw new NotImplementedException();
         }
 
-        public Task Atualizar(Guid id, JogoInputModel obj){
-
+        public Task<JogoViewModel> Inserir(JogoInputModel jogo)
+        {
+            throw new NotImplementedException();
         }
 
-        public Task Atualizar(Guid id, double preco){
-
+        public Task<List<JogoViewModel>> Obter(int pagina, int quantidade)
+        {
+            throw new NotImplementedException();
         }
 
-        public Task Deletar(Guid id){
-
+        public Task<JogoViewModel> ObterPoId(Guid id)
+        {
+            throw new NotImplementedException();
         }
-
     }
 
 

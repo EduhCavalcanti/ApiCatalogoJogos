@@ -9,30 +9,35 @@ namespace ApiCatalogoJogos.Repositorie
     public class JogoRepositorio : IJogoRepositorio
     {
         
-        public Task<List<Jogo>> Obter(int pagina , int quantidade){
 
+        Task<List<Jogos>> IJogoRepositorio.Obter(int pagina, int quantidade)
+        {
+            throw new NotImplementedException();
         }
 
-        public Task<Jogo> ObterPorId(Guid id){
-
+        Task<Jogos> IJogoRepositorio.ObterPorId(Guid id)
+        {
+            throw new NotImplementedException();
         }
 
-        public Task<List<Jogo>> Obter(string nome, string produtora){
-
+        Task<List<Jogos>> IJogoRepositorio.Obter(string nome, string produtora)
+        {
+            throw new NotImplementedException();
         }
 
-        public Task Inserir(Jogo obj){
-
+        public Task Inserir(Jogos obj)
+        {
+            throw new NotImplementedException();
         }
 
-        public Task Atualizar(Guid id){
-
+        public Task Atualizar(Jogos obj)
+        {
+            throw new NotImplementedException();
         }
 
-        public Task Remover(Guid id){
-
+        public Task Remover(Guid id)
+        {
+            throw new NotImplementedException();
         }
-        
-
     }
 }
