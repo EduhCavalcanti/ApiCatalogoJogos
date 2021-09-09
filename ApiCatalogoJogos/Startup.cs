@@ -30,7 +30,7 @@ namespace ApiCatalogoJogos
         {
             //Na injeção de dependência vai transformar a interface em uma instância das classes que implementaram 
             services.AddScoped<IJogoService, JogoService>();// Vai receber IJogoService -->Vai retornar JogoService
-            services.AddScoped<IJogoRepositorio, JogoRepositorio>();// Vai receber IJogoRepositorio -->Vai retornar JogoRepositorio
+            services.AddScoped<IJogoRepositorio, JogoSqlServerRepositorio>();// Vai receber IJogoRepositorio -->Vai retornar JogoRepositorio
             
             services.AddControllers();
             services.AddSwaggerGen(c =>
