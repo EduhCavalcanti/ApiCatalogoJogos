@@ -19,14 +19,15 @@ namespace ApiCatalogoJogos.Repositorie
             {Guid.Parse("92576bd2-388e-4f5d-96c1-8bfda6c5a268"), new Jogos{ Id = Guid.Parse("92576bd2-388e-4f5d-96c1-8bfda6c5a268"), Nome = "Street Fighter V", Produtora = "Capcom", Preco = 80} },
             {Guid.Parse("c3c9b5da-6a45-4de1-b28b-491cbf83b589"), new Jogos{ Id = Guid.Parse("c3c9b5da-6a45-4de1-b28b-491cbf83b589"), Nome = "Grand Theft Auto V", Produtora = "Rockstar", Preco = 190} }
         };
-        public Task Atualizar(Jogos obj)
+        public Task Atualizar(Jogos jogo)
         {
-            throw new NotImplementedException();
+            jogos[jogo.Id] = jogo;
+            return Task.CompletedTask;
         }
 
-        public Task Inserir(Jogos obj)
+        public Task Inserir(Jogos jogo)
         {
-            jogos.Add(obj.Id, obj);
+            jogos.Add(jogo.Id, jogo);
             return Task.CompletedTask;
         }
         
@@ -52,7 +53,8 @@ namespace ApiCatalogoJogos.Repositorie
 
         public Task Remover(Guid id)
         {
-            throw new NotImplementedException();
+            jogos.Remove(id);
+            return Task.CompletedTask;
         }
     }
 }

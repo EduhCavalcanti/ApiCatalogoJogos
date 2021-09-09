@@ -1,3 +1,5 @@
+using ApiCatalogoJogos.Repositorie;
+using ApiCatalogoJogos.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,7 +28,10 @@ namespace ApiCatalogoJogos
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            //Na injeção de dependência vai transformar a interface em uma instância das classes que implementaram 
+            services.AddScoped<IJogoService, JogoService>();// Vai receber IJogoService -->Vai retornar JogoService
+            services.AddScoped<IJogoRepositorio, JogoRepositorio>();// Vai receber IJogoRepositorio -->Vai retornar JogoRepositorio
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
