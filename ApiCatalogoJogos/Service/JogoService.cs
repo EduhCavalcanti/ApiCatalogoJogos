@@ -63,7 +63,7 @@ namespace ApiCatalogoJogos.Service
         public async Task Deletar(Guid id)
         {
             //Vai pegar o id passado
-            var jogo = _IJogoRepositorio.ObterPorId(id);
+            var jogo = await _IJogoRepositorio.ObterPorId(id);
 
             //vai verificar se o jogo está cadastrado
             if(jogo == null){

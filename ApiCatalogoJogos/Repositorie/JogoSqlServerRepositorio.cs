@@ -129,9 +129,9 @@ namespace ApiCatalogoJogos.Repositorie
 
             await sqlConnection.OpenAsync();
             SqlCommand command = new SqlCommand(comando, sqlConnection);
-            command.ExecuteNonQuery();
+            await command.ExecuteNonQueryAsync();
             await sqlConnection.CloseAsync();
-            
+
         }
     }
 }

@@ -56,3 +56,9 @@ C:\Users\Eduardo\Documents\ApiCatalogoJogos\ApiCatalogoJogos\obj\Debug\net5.0\Ap
 C:\Users\Eduardo\Documents\ApiCatalogoJogos\ApiCatalogoJogos\obj\Debug\net5.0\ApiCatalogoJogos.dll
 C:\Users\Eduardo\Documents\ApiCatalogoJogos\ApiCatalogoJogos\obj\Debug\net5.0\ref\ApiCatalogoJogos.dll
 C:\Users\Eduardo\Documents\ApiCatalogoJogos\ApiCatalogoJogos\obj\Debug\net5.0\ApiCatalogoJogos.genruntimeconfig.cache
+C:\Users\eduhc\Documents\ApiCatalogoJogos\ApiCatalogoJogos\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\Users\eduhc\Documents\ApiCatalogoJogos\ApiCatalogoJogos\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Users\eduhc\Documents\ApiCatalogoJogos\ApiCatalogoJogos\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Users\eduhc\Documents\ApiCatalogoJogos\ApiCatalogoJogos\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Users\eduhc\Documents\ApiCatalogoJogos\ApiCatalogoJogos\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\eduhc\Documents\ApiCatalogoJogos\ApiCatalogoJogos\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
