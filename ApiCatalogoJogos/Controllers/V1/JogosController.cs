@@ -22,7 +22,16 @@ namespace ApiCatalogoJogos.Controllers.V1
             _IjogoService = ijogoService;
         }
 
-
+        /// <summary>
+        /// Buscar todos os jogos de forma paginada
+        /// </summary>
+        /// <remarks>
+        /// Não é possível retornar os jogos sem paginação
+        /// </remarks>
+        /// <param name="pagina">Indica qual página está sendo consultada. Mínimo 1</param>
+        /// <param name="quantidade">Indica a quantidade de reistros por página. Mínimo 1 e máximo 50</param>
+        /// <response code="200">Retorna a lista de jogos</response>
+        /// <response code="204">Caso não haja jogos</response>   
         //Método GET, para obter a lista de jogos
         [HttpGet]
         public async Task<ActionResult<List<JogoViewModel>>> Obter([FromQuery, Range(1, int.MaxValue)] int pagina = 1,  [FromQuery, Range (1,50)] int quantidade = 5)//Quantidade de pagina vai ser de 1 até quanto der, quantidade vai ser de 1 até 50 listas de jogos
@@ -38,6 +47,12 @@ namespace ApiCatalogoJogos.Controllers.V1
             return Ok(jogos);
         }
 
+        /// <summary>
+        /// Buscar um jogo pelo seu Id
+        /// </summary>
+        /// <param name="id">Id do jogo buscado</param>
+        /// <response code="200">Retorna o jogo filtrado</response>
+        /// <response code="204">Caso não haja jogo com este id</response>   
         //Método GET, vai obter um item a partir do ID passado na rota
         [HttpGet("{id:guid}")]
         public async Task<ActionResult<JogoViewModel>> ObterPorId([FromRoute] Guid id)
@@ -52,6 +67,12 @@ namespace ApiCatalogoJogos.Controllers.V1
             return Ok(IdJogo);
         }
 
+        /// <summary>
+        /// Inserir um jogo no catálogo
+        /// </summary>
+        /// <param name="jogo">Dados do jogo a ser inserido</param>
+        /// <response code="200">Cao o jogo seja inserido com sucesso</response>
+        /// <response code="422">Caso já exista um jogo com mesmo nome para a mesma produtora</response> 
         //Método para criação
         [HttpPost]
         public async Task<ActionResult<JogoViewModel>> CriarJogo([FromBody] JogoInputModel jogo) //Vai retornar o id do jogo criado
@@ -68,6 +89,13 @@ namespace ApiCatalogoJogos.Controllers.V1
             }
         }
 
+        /// <summary>
+        /// Atualizar um jogo no catálogo
+        /// </summary>
+        /// /// <param name="id">Id do jogo a ser atualizado</param>
+        /// <param name="jogo">Novos dados para atualizar o jogo indicado</param>
+        /// <response code="200">Cao o jogo seja atualizado com sucesso</response>
+        /// <response code="404">Caso não exista um jogo com este Id</response>   
         //Método para atualizar o jogo
         [HttpPut ("{id:guid}")]
         public async Task<ActionResult> AtualizarJogo([FromRoute] Guid id, [FromBody] JogoInputModel jogo)
@@ -76,6 +104,13 @@ namespace ApiCatalogoJogos.Controllers.V1
             return Ok();
         }
 
+        /// <summary>
+        /// Atualizar o preço de um jogo
+        /// </summary>
+        /// /// <param name="id">Id do jogo a ser atualizado</param>
+        /// <param name="preco">Novo preço do jogo</param>
+        /// <response code="200">Cao o preço seja atualizado com sucesso</response>
+        /// <response code="404">Caso não exista um jogo com este Id</response>
         //Método para atualizar um campo especifico do jogo
         [HttpPatch ("{id:guid}/preco/{preco:double}")]
         public async Task<ActionResult> AtualizarPreco( [FromRoute] Guid id, [FromRoute] double preco)
@@ -89,6 +124,12 @@ namespace ApiCatalogoJogos.Controllers.V1
             }
         }
 
+        /// <summary>
+        /// Excluir um jogo
+        /// </summary>
+        /// /// <param name="id">Id do jogo a ser excluído</param>
+        /// <response code="200">Cao o preço seja atualizado com sucesso</response>
+        /// <response code="404">Caso não exista um jogo com este Id</response>   
         //Método para deletar o jogo
         [HttpDelete ("{id:guid}")]
         public async Task<ActionResult> DeletarJogo([FromRoute] Guid id)
